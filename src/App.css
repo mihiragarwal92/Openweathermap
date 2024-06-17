@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Reset box-sizing, margin, and padding for all elements */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body styling */
+body {
+  font-family: 'Outfit', 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: url(./assets/sunset.jpg); /* Background image */
+  background-position: center; /* Center the background image */
+  color: white; /* White text color */
+}
+
+/* Flexbox row container */
+.flex-row {
+  display: flex;
+  align-items: center; /* Align items to the center */
+}
+
+/* Loading screen styling */
+.loading {
+  height: 100vh; /* Full viewport height */
+  width: 100vw; /* Full viewport width */
+  display: flex;
+  flex-direction: column; /* Column layout */
+  justify-content: center; /* Center items vertically */
+  align-items: center; /* Center items horizontally */
+  font-size: 22px; /* Font size for text */
+}
+
+/* Loading icon styling */
+.loading-icon {
+  border: 16px solid #f3f3f3; /* Light grey border */
+  border-top: 16px solid #3498db; /* Blue border on top */
+  border-radius: 50%; /* Circular shape */
+  width: 100px; /* Width of the spinner */
+  height: 100px; /* Height of the spinner */
+  animation: spin 2s linear infinite; /* Spin animation */
+  margin-bottom: 10px; /* Space below the spinner */
+}
+
+/* Keyframes for spin animation */
+@keyframes spin {
+  from {
+    transform: rotate(0deg); /* Start at 0 degrees */
+  }
+  to {
+    transform: rotate(360deg); /* Rotate to 360 degrees */
+  }
+}
+
+/* Flexbox column container */
+.flex-col {
+  display: flex;
+  flex-direction: column; /* Column layout */
+  justify-content: center; /* Center items vertically */
+}
+
+/* Overlay styling */
+.overlay {
+  background-color: black; /* Black background */
+  width: 80vw; /* 80% viewport width */
+  height: 90vh; /* 90% viewport height */
+  position: fixed; /* Fixed positioning */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust position */
+  opacity: .8; /* 80% opacity */
+  border-radius: 1rem; /* Rounded corners */
+}
+
+/* Display box styling */
+.displayBox {
+  display: flex;
+  width: 80vw; /* 80% viewport width */
+  height: 90vh; /* 90% viewport height */
+  position: fixed; /* Fixed positioning */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust position */
+  border-radius: 1rem; /* Rounded corners */
+  box-shadow: 1px 1px 2px rgb(30, 30, 30); /* Box shadow */
+}
+
+/* Section 1 styling */
+.section1 {
+  display: flex;
+  justify-content: space-between; /* Space between items */
+  align-items: center; /* Center items horizontally */
+  width: 50%; /* 50% width */
+  flex-direction: column; /* Column layout */
+  padding: 2rem 4rem 3rem 4rem; /* Padding */
+}
+
+/* Form styling */
+form {
+  display: flex;
+  justify-content: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
+  gap: .5rem; /* Gap between items */
+}
+
+/* Form input styling */
+form input {
+  all: unset; /* Remove default styling */
+  background-color: transparent; /* Transparent background */
+  color: white; /* White text color */
+  z-index: 10; /* Ensure it's on top */
+  border-bottom: 1px solid white; /* Bottom border */
+  padding: .5rem 1.5rem; /* Padding */
+  font-weight: 700; /* Bold text */
+}
+
+/* Remove outline on input focus */
+input:focus {
+  outline: none;
+}
+
+/* Form button styling */
+form button {
+  background-color: transparent; /* Transparent background */
+  border: none; /* No border */
+  color: white; /* White text color */
+  font-size: 1.5rem; /* Font size */
+  position: relative; /* Relative positioning */
+  top: .25rem; /* Adjust position */
+}
+
+/* Icon styling */
+.cloud i {
+  color: white; /* White color */
+  font-size: 5rem; /* Font size */
+}
+
+/* Bottom section styling */
+.bottom {
+  display: flex;
+  width: 100%;
+  justify-content: space-between; /* Space between items */
+  align-items: end; /* Align items to the end */
+}
+
+/* Section 2 styling */
+.section2 {
+  border-left: 1px solid rgb(46, 46, 46); /* Left border */
+  background-color: rgba(0, 0, 0, 0.258); /* Semi-transparent background */
+  opacity: .5; /* 50% opacity */
+  background-color: transparent !important; /* Ensure transparency */
+  width: 50%; /* 50% width */
+  border-top-right-radius: 1rem; /* Top right rounded corner */
+  border-bottom-right-radius: 1rem; /* Bottom right rounded corner */
+  padding: 5rem; /* Padding */
+  display: flex;
+  flex-direction: column; /* Column layout */
+  gap: 1rem; /* Gap between items */
+}
+
+/* Space between items */
+.space-between {
+  display: flex;
+  justify-content: space-between; /* Space between items */
+  width: 100%; /* Full width */
+}
+
+/* Image container styling */
+.image img {
+  height: 8rem; /* Image height */
+}
+
+/* Main div styling */
+.maindiv {
+  display: flex;
+  flex-direction: column; /* Column layout */
+  justify-content: center; /* Center items vertically */
+  align-items: center; /* Center items horizontally */
+  gap: 1.5rem; /* Gap between items */
+}
+
+/* City temperature styling */
+.maindiv .city-temp {
+  display: flex;
+  flex-direction: column; /* Column layout */
+  justify-content: center; /* Center items vertically */
+  align-items: center; /* Center items horizontally */
+}
+
+/* City weather styling */
+.section2 .city-weather {
+  display: flex;
+  flex-direction: column; /* Column layout */
+  justify-content: center; /* Center items vertically */
+  align-items: center; /* Center items horizontally */
+}
+
+/* Media query for big smartphones [426px -> 600px] */
+@media only screen and (max-width: 600px) {
+  .displayBox {
+    flex-direction: column; /* Column layout */
+    height: fit-content; /* Fit content height */
+    gap: 2rem; /* Gap between items */
+    display: flex;
+    width: 100vw; /* Full viewport width */
+    position: fixed;
+    top: 0; 
+    left: 0;
+    padding: 1rem; /* Padding */
+    transform: translate(0, 0); /* Reset position */
+    border-radius: 1rem; /* Rounded corners */
+    box-shadow: 1px 1px 2px rgb(30, 30, 30); /* Box shadow */
+  }
+  .overlay {
+    width: 100vw; /* Full viewport width */
+  }
+  .section1 {
+    display: flex;
+    justify-content: space-between; /* Space between items */
+    align-items: center; /* Center items horizontally */
+    width: 100%; /* Full width */
+    flex-direction: column; /* Column layout */
+    padding: 0; /* No padding */
+    gap: 1rem; /* Gap between items */
+  }
+  .section2 {
+    padding: 0; /* No padding */
+    width: 100%; /* Full width */
+  }
+  h2 {
+    font-size: 1rem; /* Font size */
+  }
+  h1 {
+    font-size: 1.5rem; /* Font size */
+  }
+  h3 {
+    font-size: 1rem; /* Font size */
+  }
+  .image img {
+    height: 4rem; /* Image height */
+  }
+}
+
+/* Media query for small smartphones [<= 426px] */
+@media only screen and (max-width: 426px) {
+  .overlay {
+    background-color: transparent !important; /* Ensure transparency */
+    border: 0px; /* No border */
+  }
+  .section2 {
+    border: 0px; /* No border */
+    opacity: 1; /* Full opacity */
+  }
+}
+
+
+
+/* ThemeContext CSS */
+.light {
+  /* background-color: #ffffff; */
+  background-color: rgba(255, 255, 255, 0.93) !important; /* Semi-transparent background */
+  opacity: .9; /* 50% opacity */
+  color: #000000;
+}
+
+.dark {
+  /* background-color: #333333; */
+  background-color: rgba(0, 0, 0, 0.258) !important; /* Semi-transparent background */
+  opacity: .9; /* 50% opacity */
+  color: #ffffff;
+}
+
+.background-setting{
+  display: flex;
+  position: relative;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.lightDark-toggle{
+  background-color: transparent;
+  border: 0px;
+  
+}
