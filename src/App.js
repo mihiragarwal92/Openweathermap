@@ -79,11 +79,6 @@ function App() {
     }
   };
 
-  // Fetch user's location on component mount
-  useEffect(() => {
-    getLocation();
-  }, []);
-
   // Function to update the current date and time
   function updateDateTime() {
     const now = new Date();
