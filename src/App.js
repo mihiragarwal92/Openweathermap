@@ -107,9 +107,9 @@ useEffect(() => {
   }
 
   // Update the date and time immediately when the page loads
-  useEffect(() => {
-    updateDateTime();
-  });
+useEffect(() => {
+  updateDateTime();
+});
 
   // Update the date and time every second
   setInterval(updateDateTime, 1000);
