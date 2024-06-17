@@ -80,9 +80,15 @@ function App() {
   };
 
   // Fetch user's location on component mount
-  useEffect(() => {
-    getLocation();
-  }, []);
+useEffect(() => {
+    const location = getLocation();
+    // Your useEffect logic that depends on getLocation
+
+    // Cleanup function if needed
+    return () => {
+        // Cleanup logic
+    };
+}, [getLocation]); // Include getLocation in the dependency array
 
   // Function to update the current date and time
   function updateDateTime() {
