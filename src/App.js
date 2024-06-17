@@ -80,7 +80,7 @@ function App() {
   };
 
 useEffect(() => {
-    getLocation();
+    getLocation()
 };
 
   // Function to update the current date and time
