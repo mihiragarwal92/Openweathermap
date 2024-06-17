@@ -82,6 +82,10 @@ function App() {
   // Function to update the current date and time
   function updateDateTime() {
     const now = new Date();
+  // Fetch user's location on component mount
+  useEffect(() => {
+    getLocation();
+  }, []);
 
     // Get the current time
     const hours = String(now.getHours()).padStart(2, '0');
